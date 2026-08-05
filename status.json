@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-05T23:20:23.500548+00:00",
+  "generated": "2026-08-05T23:21:44.453055+00:00",
   "total_repos": 6,
   "active_nodes": 4,
   "repos": {
@@ -55,6 +55,7 @@
   },
   "node_map_summary": {
     "total_nodes": 6,
-    "max_depth": 2
+    "max_depth": 2,
+    "capacity": 36
   }
 }
