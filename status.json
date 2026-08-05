@@ -1,0 +1,60 @@
+{
+  "generated": "2026-08-05T23:20:23.500548+00:00",
+  "total_repos": 6,
+  "active_nodes": 4,
+  "repos": {
+    "une": {
+      "health": "active",
+      "role": [
+        "energy_accounting",
+        "wisdom_engine"
+      ],
+      "files": 9400,
+      "lines": 92766
+    },
+    "openroot": {
+      "health": "active",
+      "role": [
+        "system_kernel"
+      ],
+      "files": 2819,
+      "lines": 38364
+    },
+    "wisdom-scaffold": {
+      "health": "active",
+      "role": [
+        "wisdom_engine"
+      ],
+      "files": 42,
+      "lines": 198
+    },
+    "cannonball": {
+      "health": "clone_failed",
+      "role": [
+        "failed"
+      ],
+      "files": 0,
+      "lines": 0
+    },
+    "aerocement": {
+      "health": "active",
+      "role": [
+        "physical_systems"
+      ],
+      "files": 125,
+      "lines": 1679
+    },
+    "jesseray718": {
+      "health": "minimal",
+      "role": [
+        "profile_hub"
+      ],
+      "files": 24,
+      "lines": 16
+    }
+  },
+  "node_map_summary": {
+    "total_nodes": 6,
+    "max_depth": 2
+  }
+}
