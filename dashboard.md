@@ -1,18 +1,31 @@
-# Ecosystem Dashboard
+# OpenRoot Canonical Dashboard
+Generated: `2026-08-19T10:40:04Z`
 
-**Generated:** 2026-08-05T23:21:44.453055+00:00
+**Active nodes:** 17 / 17
 
-| Total Repos | Active | Depth | Capacity |
-|---|---|---|---|
-| 6 | 4 | 2 | 36 |
+| Repo | Updated | Lang | ★ | Issues | Status |
+|------|---------|------|---|--------|--------|
+| aerocement | 2026-08-19 | Python | 1 | 0 | active |
+| agape-coordination | 2026-08-19 | Python | 0 | 0 | active |
+| agape-ipfs | 2026-08-19 | Shell | 0 | 0 | active |
+| agape-primitives | 2026-08-17 | Python | 0 | 0 | active |
+| agape-une | 2026-08-19 | Python | 0 | 0 | active |
+| agapenet | 2026-08-19 | Python | 1 | 0 | active |
+| agaperesonance | 2026-08-19 | Python | 0 | 0 | active |
+| black-locust-rmh | 2026-08-19 | Shell | 0 | 0 | active |
+| canonical | 2026-08-19 | Python | 0 | 0 | active |
+| etaledger | 2026-08-19 | Python | 0 | 0 | active |
+| fractallattice | 2026-08-19 | Python | 0 | 0 | active |
+| jesseray718 | 2026-08-19 | Python | 1 | 0 | active |
+| openroot | 2026-08-19 | C++ | 1 | 5 | active |
+| openroot-spoke-template | 2026-08-19 | Python | 1 | 0 | active |
+| und-protocol | 2026-08-19 | C++ | 0 | 0 | active |
+| une | 2026-08-19 | Makefile | 0 | 6 | active |
+| wisdom-scaffold | 2026-08-19 | Python | 0 | 2 | active |
 
-## Repo Status
-
-| Repo | Role | Health | Files | Lines |
-|---|---|---|---|---|
-| une | energy_accounting, wisdom_engine | ✅ active | 9400 | 92766 |
-| openroot | system_kernel | ✅ active | 2819 | 38364 |
-| wisdom-scaffold | wisdom_engine | ✅ active | 42 | 198 |
-| cannonball | failed | ❌ clone_failed | 0 | 0 |
-| aerocement | physical_systems | ✅ active | 125 | 1679 |
-| jesseray718 | profile_hub | ⚠️ minimal | 24 | 16 |
+## Roles
+- Trunk: openroot
+- Physical: aerocement · black-locust-rmh
+- Computational: une · etaledger · und-protocol · fractallattice · agaperesonance
+- Cooperation: agape-*
+- Meta: canonical · openroot-spoke-template

@@ -1,51 +1,21 @@
-"""canonical/ecosystem_dashboard.py
-The canonical index node — reads ecosystem manifest and generates dashboard."""
-import json, os
+#!/usr/bin/env python3
+import json, urllib.request, datetime
 from pathlib import Path
-from datetime import datetime, timezone
-
-UNE = Path(os.environ.get("UNE_DIR", str(Path.home() / "une")))
-HERE = Path(__file__).parent
-MANIFEST = UNE / "ecosystem_manifest.json"
-
-def generate():
-    if not MANIFEST.exists():
-        return {"error": "manifest not found"}
-    
-    manifest = json.loads(MANIFEST.read_text())
-    repos = manifest.get("repos", {})
-    node_map = manifest.get("node_map", {})
-    
-    status = {
-        "generated": datetime.now(timezone.utc).isoformat(),
-        "total_repos": len(repos),
-        "active_nodes": len([r for r in repos.values() if r.get("health") == "active"]),
-        "total_files": sum(r.get("files", 0) for r in repos.values()),
-        "total_lines": sum(r.get("lines", 0) for r in repos.values()),
-        "max_depth": node_map.get("max_depth", 0),
-        "capacity": node_map.get("capacity", 0),
-        "repos": repos
-    }
-    
-    (HERE / "status.json").write_text(json.dumps(status, indent=2))
-    
-    md = f"# Ecosystem Dashboard\n\n"
-    md += f"**Generated:** {status['generated']}\n\n"
-    md += f"| Repos | Active | Files | Lines | Depth | Capacity |\n|---|---|---|---|---|---|\n"
-    md += f"| {status['total_repos']} | {status['active_nodes']} | {status['total_files']} | {status['total_lines']} | {status['max_depth']} | {status['capacity']} |\n\n"
-    md += "## Repos\n\n"
-    md += "| Repo | Role | Health | Files | Lines |\n|---|---|---|---|---|\n"
-    for name, data in repos.items():
-        role = ", ".join(data.get("role", []))
-        health = data.get("health", "unknown")
-        files = data.get("files", 0)
-        lines = data.get("lines", 0)
-        icon = "✅" if health == "active" else "⚠️" if health == "minimal" else "❌"
-        md += f"| {name} | {role} | {icon} {health} | {files} | {lines} |\n"
-    
-    (HERE / "dashboard.md").write_text(md)
-    print(f"[CANONICAL] Dashboard regenerated — {status['active_nodes']} active repos")
-    return status
-
-if __name__ == "__main__":
-    generate()
+REPOS = ["openroot","aerocement","black-locust-rmh","une","etaledger","und-protocol","fractallattice","agaperesonance","agape-une","agape-primitives","agapenet","agape-coordination","openroot-spoke-template","jesseray718","wisdom-scaffold","agape-ipfs","canonical"]
+def fetch(n):
+    try:
+        with urllib.request.urlopen(f"https://api.github.com/repos/jesseray718/{n}", timeout=10) as r:
+            d = json.loads(r.read().decode())
+            return {"name":n,"updated":d.get("updated_at","")[:10],"stars":d.get("stargazers_count",0),"archived":d.get("archived",False),"open_issues":d.get("open_issues_count",0),"language":d.get("language") or "-","status":"archived" if d.get("archived") else "active"}
+    except Exception as e:
+        return {"name":n,"status":"error","error":str(e)[:50]}
+now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+results = [fetch(r) for r in REPOS]
+active = sum(1 for r in results if r.get("status")=="active")
+Path("status.json").write_text(json.dumps({"generated_at":now,"trunk":"openroot","active_count":active,"total_tracked":len(REPOS),"repos":results}, indent=2))
+md = [f"# OpenRoot Canonical Dashboard\nGenerated: `{now}`\n\n**Active nodes:** {active} / {len(REPOS)}\n\n| Repo | Updated | Lang | ★ | Issues | Status |\n|------|---------|------|---|--------|--------|"]
+for r in sorted(results, key=lambda x: x.get("name","")):
+    md.append(f"| {r.get('name')} | {r.get('updated','-')} | {r.get('language','-')} | {r.get('stars',0)} | {r.get('open_issues',0)} | {r.get('status')} |")
+md += ["\n## Roles\n- Trunk: openroot\n- Physical: aerocement · black-locust-rmh\n- Computational: une · etaledger · und-protocol · fractallattice · agaperesonance\n- Cooperation: agape-*\n- Meta: canonical · openroot-spoke-template"]
+Path("dashboard.md").write_text("\n".join(md))
+print(f"Dashboard written — {active} active")

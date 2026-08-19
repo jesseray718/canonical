@@ -1,61 +1,161 @@
 {
-  "generated": "2026-08-05T23:21:44.453055+00:00",
-  "total_repos": 6,
-  "active_nodes": 4,
-  "repos": {
-    "une": {
-      "health": "active",
-      "role": [
-        "energy_accounting",
-        "wisdom_engine"
-      ],
-      "files": 9400,
-      "lines": 92766
+  "generated_at": "2026-08-19T10:40:04Z",
+  "trunk": "openroot",
+  "active_count": 17,
+  "total_tracked": 17,
+  "repos": [
+    {
+      "name": "openroot",
+      "updated": "2026-08-19",
+      "stars": 1,
+      "archived": false,
+      "open_issues": 5,
+      "language": "C++",
+      "status": "active"
     },
-    "openroot": {
-      "health": "active",
-      "role": [
-        "system_kernel"
-      ],
-      "files": 2819,
-      "lines": 38364
+    {
+      "name": "aerocement",
+      "updated": "2026-08-19",
+      "stars": 1,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
     },
-    "wisdom-scaffold": {
-      "health": "active",
-      "role": [
-        "wisdom_engine"
-      ],
-      "files": 42,
-      "lines": 198
+    {
+      "name": "black-locust-rmh",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Shell",
+      "status": "active"
     },
-    "cannonball": {
-      "health": "clone_failed",
-      "role": [
-        "failed"
-      ],
-      "files": 0,
-      "lines": 0
+    {
+      "name": "une",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 6,
+      "language": "Makefile",
+      "status": "active"
     },
-    "aerocement": {
-      "health": "active",
-      "role": [
-        "physical_systems"
-      ],
-      "files": 125,
-      "lines": 1679
+    {
+      "name": "etaledger",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
     },
-    "jesseray718": {
-      "health": "minimal",
-      "role": [
-        "profile_hub"
-      ],
-      "files": 24,
-      "lines": 16
+    {
+      "name": "und-protocol",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 0,
+      "language": "C++",
+      "status": "active"
+    },
+    {
+      "name": "fractallattice",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
+    },
+    {
+      "name": "agaperesonance",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
+    },
+    {
+      "name": "agape-une",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
+    },
+    {
+      "name": "agape-primitives",
+      "updated": "2026-08-17",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
+    },
+    {
+      "name": "agapenet",
+      "updated": "2026-08-19",
+      "stars": 1,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
+    },
+    {
+      "name": "agape-coordination",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
+    },
+    {
+      "name": "openroot-spoke-template",
+      "updated": "2026-08-19",
+      "stars": 1,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
+    },
+    {
+      "name": "jesseray718",
+      "updated": "2026-08-19",
+      "stars": 1,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
+    },
+    {
+      "name": "wisdom-scaffold",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 2,
+      "language": "Python",
+      "status": "active"
+    },
+    {
+      "name": "agape-ipfs",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Shell",
+      "status": "active"
+    },
+    {
+      "name": "canonical",
+      "updated": "2026-08-19",
+      "stars": 0,
+      "archived": false,
+      "open_issues": 0,
+      "language": "Python",
+      "status": "active"
     }
-  },
-  "node_map_summary": {
-    "total_nodes": 6,
-    "max_depth": 2,
-    "capacity": 36
-  }
+  ]
 }
