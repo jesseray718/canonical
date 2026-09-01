@@ -7,3 +7,6 @@ It aggregates health, roles, and metrics from all sibling repos.
 
 ## Live Status
 (See `status.json` and `dashboard.md` below)
+
+## Knowledge Integration
+See `docs/knowledge/`.
