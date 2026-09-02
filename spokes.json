@@ -1,0 +1,21 @@
+{
+  "updated": "2026-09-02",
+  "hub": "jesseray718/openroot",
+  "spokes": [
+    {
+      "id": "wisdom-scaffold",
+      "repo": "jesseray718/wisdom-scaffold",
+      "role": "sidekick hang + kit/bin/sidekick.py",
+      "pin": "v0.1.0",
+      "url": "https://github.com/jesseray718/wisdom-scaffold/releases/tag/v0.1.0"
+    },
+    {
+      "id": "openroot",
+      "repo": "jesseray718/openroot",
+      "role": "engineering hub + parts_library/tidbits.json",
+      "pin": "main",
+      "url": "https://github.com/jesseray718/openroot"
+    }
+  ],
+  "not": "do not clone both trees into this repo"
+}
