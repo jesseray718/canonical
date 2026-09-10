@@ -10,3 +10,31 @@ It aggregates health, roles, and metrics from all sibling repos.
 
 ## Knowledge Integration
 See `docs/knowledge/`.
+
+## 🎯 Purpose
+
+This repository contains canonical definitions and reference implementations for the OpenRoot ecosystem.
+
+## 📦 Contents
+
+- Canonical JSON schemas
+- Reference implementations
+- Validation tools
+
+## 🔗 Related Projects
+
+- [AeroCement](../aerocement) - Solar-thermal concrete
+- [OpenRoot](../openroot) - Ferrocement domes + thermal systems
+- [Wisdom Scaffold](../wisdom-scaffold) - Ancient wisdom + computation
+
+## 💬 Contributing
+
+1. Fork the repo
+2. Create a branch
+3. Submit a PR
+
+Questions? Email jrm8908@proton.me
+
+## 📄 License
+
+GPL-3.0 (software) / CC-BY-SA-4.0 (documentation)
